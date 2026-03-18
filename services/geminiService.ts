@@ -12,11 +12,9 @@ const deobfuscateKey = (obfuscated: string) => {
 };
 
 const apiKey = deobfuscateKey(process.env.API_KEY || '');
-if (!apiKey) {
-  throw new Error("API_KEY environment variable not set");
-}
 
-const ai = new GoogleGenAI({ apiKey });
+// Provide a dummy key if missing to prevent fatal crash on load, so React can mount and show errors gracefully later.
+const ai = new GoogleGenAI({ apiKey: apiKey || 'dummy-key-to-prevent-crash' });
 
 const cropAnalysisResponseSchema = {
   type: Type.OBJECT,
