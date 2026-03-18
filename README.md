@@ -46,6 +46,10 @@ HarvestHub is a comprehensive web applications designed to empower farmers with 
 
 ## Security Note 🔒
 The frontend API key is strictly obfuscated natively within Vite during the build process to deter basic automated scraping bots. If you plan to deploy this project for wide, public read-write access, we strongly advise transitioning the analysis service calls to a dedicated backend server for maximum security.
+## working demo
+ <img width="1919" height="1117" alt="image" src="https://github.com/user-attachments/assets/8bbeec44-08cd-473b-be7e-5698366f7aed" />
+
 
 ---
 *Built with React, Vite, and TailwindCSS.*
+ 
